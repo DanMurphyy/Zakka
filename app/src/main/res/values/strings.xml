@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ZakovatUz</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="malumot">\tZakovatUz – Islom tarixi, Umumiy tarix va qiziqarli faktlar haqidagi ko\'ngil ochar va ma\’rifiy ilova.\n - Foydalanish oson va ko\'p yangi narsalarni o\'rganishga yordam beradi. \n - Bu o\'z bilimini oshirib, vaqtdan unumli foydalanmoqchi bo\'lganlar uchun juda mos keladi.\n - ZakovatUz bilan siz bir vaqtning o\'zida bilimingizni sinab ko\'rishingiz, yangi ma\'lumotlarni o\'rganishingiz va vaqtni foydalik o\'tkazishingiz mumkin!</string>
+
+</resources>

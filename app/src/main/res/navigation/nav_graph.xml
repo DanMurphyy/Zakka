@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/enterFragment">
+
+    <fragment
+        android:id="@+id/enterFragment"
+        android:name="com.hfad.zakovatuz.EnterFragment"
+        android:label="ZakovatUz"
+        tools:layout="@layout/fragment_enter" >
+        <action
+            android:id="@+id/action_enterFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.hfad.zakovatuz.GameFragment"
+        android:label="Oyin sahifasi"
+        tools:layout="@layout/fragment_game" >
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_gameFragment_to_badResultFragment"
+            app:destination="@id/badResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/helpFragment"
+        android:name="com.hfad.zakovatuz.HelpFragment"
+        android:label="Ilova haqida"
+        tools:layout="@layout/fragment_help" />
+    <fragment
+        android:id="@+id/badResultFragment"
+        android:name="com.hfad.zakovatuz.BadResultFragment"
+        android:label="fragment_bad_result"
+        tools:layout="@layout/fragment_bad_result" >
+        <argument
+            android:name="numQuestions"
+            app:argType="integer" />
+        <argument
+            android:name="inCorrectJavoblar"
+            app:argType="integer" />
+        <argument
+            android:name="correctJavoblar"
+            app:argType="integer" />
+        <argument
+            android:name="incorrectGuesses"
+            app:argType="string" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+    </fragment>
+
+</navigation>
