@@ -25,6 +25,9 @@
         <action
             android:id="@+id/action_gameFragment_to_badResultFragment"
             app:destination="@id/badResultFragment" />
+        <action
+            android:id="@+id/action_gameFragment_to_goodResultFragment"
+            app:destination="@id/goodResultFragment" />
     </fragment>
     <fragment
         android:id="@+id/helpFragment"
@@ -48,6 +51,24 @@
         <argument
             android:name="incorrectGuesses"
             app:argType="string" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/goodResultFragment"
+        android:name="com.hfad.zakovatuz.GoodResultFragment"
+        android:label="fragment_good_result"
+        tools:layout="@layout/fragment_good_result">
+        <argument
+            android:name="numQuestions"
+            app:argType="integer" />
+        <argument
+            android:name="inCorrectJavoblar"
+            app:argType="integer" />
+        <argument
+            android:name="correctJavoblar"
+            app:argType="integer" />
         <argument
             android:name="name"
             app:argType="string" />
