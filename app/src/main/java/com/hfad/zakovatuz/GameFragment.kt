@@ -44,6 +44,8 @@ class GameFragment : Fragment() {
         _binding = FragmentGameBinding.inflate(inflater, container, false)
         val view = binding.root
 
+        binding.game = this
+
         var name = GameFragmentArgs.fromBundle(requireArguments()).name
         randomizeQuestions()
 
