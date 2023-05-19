@@ -24,10 +24,12 @@
             app:argType="string" />
         <action
             android:id="@+id/action_gameFragment_to_badResultFragment"
-            app:destination="@id/badResultFragment" />
+            app:destination="@id/badResultFragment"
+            app:popUpTo="@id/enterFragment" />
         <action
             android:id="@+id/action_gameFragment_to_goodResultFragment"
-            app:destination="@id/goodResultFragment" />
+            app:destination="@id/goodResultFragment"
+            app:popUpTo="@id/enterFragment" />
     </fragment>
     <fragment
         android:id="@+id/helpFragment"
@@ -37,7 +39,7 @@
     <fragment
         android:id="@+id/badResultFragment"
         android:name="com.hfad.zakovatuz.BadResultFragment"
-        android:label="fragment_bad_result"
+        android:label="Natija"
         tools:layout="@layout/fragment_bad_result" >
         <argument
             android:name="numQuestions"
@@ -54,11 +56,14 @@
         <argument
             android:name="name"
             app:argType="string" />
+        <action
+            android:id="@+id/action_badResultFragment_to_enterFragment"
+            app:destination="@id/enterFragment" />
     </fragment>
     <fragment
         android:id="@+id/goodResultFragment"
         android:name="com.hfad.zakovatuz.GoodResultFragment"
-        android:label="fragment_good_result"
+        android:label=" 1chi bosqich natijasi"
         tools:layout="@layout/fragment_good_result">
         <argument
             android:name="numQuestions"
@@ -72,6 +77,9 @@
         <argument
             android:name="name"
             app:argType="string" />
+        <action
+            android:id="@+id/action_goodResultFragment_to_enterFragment"
+            app:destination="@id/enterFragment" />
     </fragment>
 
 </navigation>

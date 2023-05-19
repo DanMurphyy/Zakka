@@ -15,6 +15,7 @@ class GameFragment : Fragment() {
      lateinit var currentQuestion: Question
      lateinit var answers: MutableList<String>
     private var questionIndex = 0
+    private var questionProgress = 0
     private var numQuestions = 3
     private var incorrectGuesses = ""
     private var incorrectJavoblar = 0
@@ -32,7 +33,7 @@ class GameFragment : Fragment() {
         binding.game = this
 
         randomizeQuestions()
-
+        questionProgress()
         binding.submitButton.setOnClickListener {
             if (correctGuess() || incorrectGuess()) {
                 if (good() && bad()) {
@@ -55,7 +56,9 @@ class GameFragment : Fragment() {
                     )
                 }
             }
+            questionProgress()
         }
+
         return view
     }
 
@@ -125,6 +128,11 @@ class GameFragment : Fragment() {
         answers = currentQuestion.answers.toMutableList()
         // Shuffle the answers
         answers.shuffle()
+    }
+
+    private fun questionProgress() {
+        questionProgress ++
+        binding.questionN.text = "Savol: $questionProgress / $numQuestions"
     }
 
     override fun onDestroyView() {
