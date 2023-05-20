@@ -9,11 +9,14 @@
         <entry key="app/src/main/res/drawable/share.xml" value="0.131" />
         <entry key="app/src/main/res/layout/fragment_bad_result.xml" value="0.20185185185185187" />
         <entry key="app/src/main/res/layout/fragment_bad_result1.xml" value="0.2578125" />
+        <entry key="app/src/main/res/layout/fragment_bad_result2.xml" value="0.2578125" />
         <entry key="app/src/main/res/layout/fragment_enter.xml" value="0.2578125" />
         <entry key="app/src/main/res/layout/fragment_game.xml" value="0.20185185185185187" />
         <entry key="app/src/main/res/layout/fragment_game1.xml" value="0.2578125" />
+        <entry key="app/src/main/res/layout/fragment_game2.xml" value="0.2578125" />
         <entry key="app/src/main/res/layout/fragment_good_result.xml" value="0.335" />
         <entry key="app/src/main/res/layout/fragment_good_result1.xml" value="0.2578125" />
+        <entry key="app/src/main/res/layout/fragment_good_result2.xml" value="0.2578125" />
         <entry key="app/src/main/res/layout/fragment_help.xml" value="0.2578125" />
         <entry key="app/src/main/res/layout/xato_javoblar.xml" value="0.2578125" />
       </map>

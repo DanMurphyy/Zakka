@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Game2Fragment">
+    <data>
+        <variable
+            name="game2"
+            type="com.hfad.zakovatuz.Game2Fragment" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:background="@drawable/beck"
+        android:padding="15dp">
+        <LinearLayout
+            android:id="@+id/frameLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/questionN2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Savollar : "
+                android:textColor="@color/white"
+                android:layout_marginBottom="20dp"/>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="25dp"
+                android:layout_gravity="center">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+                    <TextView
+                        android:id="@+id/questionText2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="@{game2.currentQuestion.text}"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:typeface="normal"
+                        tools:text="Android kompaniyasing logotipi qanday rangda?" />
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+            <RadioGroup
+                android:id="@+id/questionRadioGroup2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:padding="15dp"
+                android:orientation="vertical">
+                <RadioButton
+                    android:id="@+id/firstAnswerRadioButton2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@{game2.answers[0]}"
+                    android:textColor="@color/white"
+
+                    tools:text="Oq"/>
+                <RadioButton
+                    android:id="@+id/secondAnswerRadioButton2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{game2.answers[1]}"
+                    android:textColor="@color/white"
+                    tools:text="Qora"/>
+                <RadioButton
+                    android:id="@+id/thirdAnswerRadioButton2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{game2.answers[2]}"
+                    android:textColor="@color/white"
+                    tools:text="Yashil"/>
+                <RadioButton
+                    android:id="@+id/fourthAnswerRadioButton2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="@{game2.answers[3]}"
+                    tools:text="Qizil"/>
+            </RadioGroup>
+            <Button
+                android:id="@+id/submitButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_bg"
+                android:text="Tekshirmoq"/>
+        </LinearLayout>
+    </ScrollView>
+</layout>

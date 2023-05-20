@@ -14,7 +14,6 @@ import android.widget.TextView
 import androidx.core.content.FileProvider
 import androidx.navigation.findNavController
 import com.hfad.zakovatuz.databinding.FragmentBadResult1Binding
-import com.hfad.zakovatuz.databinding.FragmentBadResultBinding
 import java.io.File
 import java.io.FileOutputStream
 

@@ -46,7 +46,7 @@ class GoodResult1Fragment : Fragment() {
         }
 
         binding.next1.setOnClickListener {
-            view.findNavController().navigate(R.id.action_goodResult1Fragment_to_enterFragment)
+            view.findNavController().navigate(GoodResult1FragmentDirections.actionGoodResult1FragmentToGame2Fragment(name))
         }
 
         return view
