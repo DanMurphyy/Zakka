@@ -63,13 +63,13 @@
                 android:layout_height="wrap_content"
                 android:text="Qaytadan Boshlash"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/wrong"
+                app:layout_constraintEnd_toStartOf="@+id/next"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/sharem" />
 
             <Button
-                android:id="@+id/wrong"
+                android:id="@+id/next"
                 android:layout_width="126dp"
                 android:layout_height="wrap_content"
                 android:text="Keyingi \nbosqich "
