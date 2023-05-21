@@ -46,9 +46,9 @@ class GoodResult2Fragment : Fragment() {
             shareLayoutPhoto(" Ilovani yuklab olin \nhttps://telegram.me/joinchat/SDdS2FAiH5e4grs5")
         }
 
-//        binding.next2.setOnClickListener {
-//            view.findNavController().navigate(GoodResult2FragmentDirections.actionGoodResult2FragmentToGame3Fragment(name))
-//        }
+        binding.next2.setOnClickListener {
+            view.findNavController().navigate(GoodResult2FragmentDirections.actionGoodResult2FragmentToGame3Fragment(name))
+        }
 
         return view
     }
