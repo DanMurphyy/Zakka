@@ -36,8 +36,8 @@ class GoodResult3Fragment : Fragment() {
         var correctJavoblar = GoodResult3FragmentArgs.fromBundle(requireArguments()).correctJavoblar
         var name = GoodResult3FragmentArgs.fromBundle(requireArguments()).name
 
-        binding.tabrikm3.text = "!! Tabriklaymiz $name !! \n Siz 4chi bosqichni muvaffaqiyatli bajardingiz "
-        binding.natijalarm3.text = "Savollar miqdori : $numQuestions ta \nTo'gri javoblar     : $correctJavoblar ta \nXato javoblar      : $inCorrectJavoblar ta"
+        binding.tabrikm3.text = "!! Tabriklaymiz $name !! \n Siz 4-bosqichni muvaffaqiyatli bajardingiz!"
+        binding.natijalarm3.text = "Savollar miqdori : $numQuestions ta \nTo'g'ri javoblar     : $correctJavoblar ta \nXato javoblar      : $inCorrectJavoblar ta"
         binding.restartm3.setOnClickListener {
             view.findNavController().navigate(R.id.action_goodResult3Fragment_to_enterFragment)
         }

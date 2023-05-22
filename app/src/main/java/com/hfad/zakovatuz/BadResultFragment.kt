@@ -39,10 +39,10 @@ class BadResultFragment : Fragment() {
         var name = BadResultFragmentArgs.fromBundle(requireArguments()).name
         val btnCustomDialog: Button = view.findViewById(R.id.wrong)
 
-        binding.tabrik.text = "!! Afsus $name !! \nSiz ZakovatUz oyinini 1chi bosqichda yakunladingiz"
-        binding.natijalar.text = "Savollar miqdori : $numQuestions ta \nTo'gri javoblar     : $correctJavoblar ta \nXato javoblar      : $inCorrectJavoblar ta"
+        binding.tabrik.text = "!! Afsus $name !! \nSiz ZakovatUz o'yinini 1-bosqichda yakunladingiz"
+        binding.natijalar.text = "Savollar miqdori : $numQuestions ta \nTo'g'ri javoblar    : $correctJavoblar ta \nXato javoblar      : $inCorrectJavoblar ta"
         binding.restart.setOnClickListener {
-            view.findNavController().navigate(R.id.action_badResultFragment_to_enterFragment)
+            view.findNavController().navigate(BadResultFragmentDirections.actionBadResultFragmentToEnterFragment(name))
         }
         btnCustomDialog.setOnClickListener {
             customDialogFunction(incorrectGuesses)
@@ -68,7 +68,7 @@ class BadResultFragment : Fragment() {
 
     private fun generateLayoutPhoto(): Bitmap {
         // Find the specific view that you want to share
-        val viewToShare = binding.umimiyNatija
+        val viewToShare = binding.root
 
         // Generate a bitmap of the view
         val bitmap = Bitmap.createBitmap(viewToShare.width, viewToShare.height, Bitmap.Config.ARGB_8888)

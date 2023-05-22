@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white"
+    android:background="@color/listcolor"
     android:padding="10dp">
     <ScrollView
         android:layout_width="match_parent"
@@ -20,7 +20,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Savollar royhati va togri javoblari:"
+        android:text="Savollar ro'yhati va to'g'ri javoblari:"
         android:layout_gravity="center_horizontal"
         android:textAlignment="center"
         android:textColor="@color/purple_700"

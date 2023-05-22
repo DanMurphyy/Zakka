@@ -17,7 +17,7 @@
     <fragment
         android:id="@+id/gameFragment"
         android:name="com.hfad.zakovatuz.GameFragment"
-        android:label="Oyin sahifasi"
+        android:label="1-bosqich"
         tools:layout="@layout/fragment_game" >
         <argument
             android:name="name"
@@ -58,12 +58,12 @@
             app:argType="string" />
         <action
             android:id="@+id/action_badResultFragment_to_enterFragment"
-            app:destination="@id/enterFragment" />
+            app:destination="@id/gameFragment" />
     </fragment>
     <fragment
         android:id="@+id/goodResultFragment"
         android:name="com.hfad.zakovatuz.GoodResultFragment"
-        android:label=" 1chi bosqich natijasi"
+        android:label=" 1-bosqich natijasi"
         tools:layout="@layout/fragment_good_result">
         <argument
             android:name="numQuestions"
@@ -87,7 +87,7 @@
     <fragment
         android:id="@+id/game1Fragment"
         android:name="com.hfad.zakovatuz.Game1Fragment"
-        android:label="2chi bosqich"
+        android:label="2-bosqich"
         tools:layout="@layout/fragment_game1">
         <argument
             android:name="name"
@@ -123,12 +123,12 @@
             app:argType="string" />
         <action
             android:id="@+id/action_badResult1Fragment_to_enterFragment"
-            app:destination="@id/enterFragment" />
+            app:destination="@id/game1Fragment" />
     </fragment>
     <fragment
         android:id="@+id/goodResult1Fragment"
         android:name="com.hfad.zakovatuz.GoodResult1Fragment"
-        android:label="2chi bosqich natijasi"
+        android:label="2-bosqich natijasi"
         tools:layout="@layout/fragment_good_result1">
         <argument
             android:name="numQuestions"
@@ -152,7 +152,7 @@
     <fragment
         android:id="@+id/game2Fragment"
         android:name="com.hfad.zakovatuz.Game2Fragment"
-        android:label="3chi bosqich"
+        android:label="3-bosqich"
         tools:layout="@layout/fragment_game2">
         <argument
             android:name="name"
@@ -169,7 +169,7 @@
     <fragment
         android:id="@+id/goodResult2Fragment"
         android:name="com.hfad.zakovatuz.GoodResult2Fragment"
-        android:label="3chi bosqich natijasi"
+        android:label="3-bosqich natijasi"
         tools:layout="@layout/fragment_good_result2" >
         <argument
             android:name="numQuestions"
@@ -212,12 +212,12 @@
             app:argType="string" />
         <action
             android:id="@+id/action_badResult2Fragment_to_enterFragment"
-            app:destination="@id/enterFragment" />
+            app:destination="@id/game2Fragment" />
     </fragment>
     <fragment
         android:id="@+id/game3Fragment"
         android:name="com.hfad.zakovatuz.Game3Fragment"
-        android:label="4chi bosqich"
+        android:label="4-bosqich"
         tools:layout="@layout/fragment_game3" >
         <argument
             android:name="name"
@@ -253,12 +253,12 @@
             app:argType="string" />
         <action
             android:id="@+id/action_badResult3Fragment_to_enterFragment"
-            app:destination="@id/enterFragment" />
+            app:destination="@id/game3Fragment" />
     </fragment>
     <fragment
         android:id="@+id/goodResult3Fragment"
         android:name="com.hfad.zakovatuz.GoodResult3Fragment"
-        android:label="4chi bosqich natijasi"
+        android:label="4-bosqich natijasi"
         tools:layout="@layout/fragment_good_result3" >
         <argument
             android:name="numQuestions"
@@ -282,7 +282,7 @@
     <fragment
         android:id="@+id/game4Fragment"
         android:name="com.hfad.zakovatuz.Game4Fragment"
-        android:label="4chi-Yakuniy bosqich"
+        android:label="5-yakuniy bosqich"
         tools:layout="@layout/fragment_game4">
         <argument
             android:name="name"
@@ -318,7 +318,7 @@
             app:argType="string" />
         <action
             android:id="@+id/action_badResult4Fragment_to_enterFragment"
-            app:destination="@id/enterFragment" />
+            app:destination="@id/game4Fragment" />
     </fragment>
     <fragment
         android:id="@+id/goodResult4Fragment"

@@ -6,25 +6,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/beck"
+    android:background="@drawable/right"
     tools:context=".GoodResult4Fragment">
 
     <LinearLayout
         android:id="@+id/umimiy_natijam4"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_weight="1"
         android:orientation="vertical">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="5chi bosqich yakunlandi!!"
+            android:text="5-bosqich yakunlandi!!"
             android:textStyle="bold"
             android:textSize="30sp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:gravity="center_horizontal"
-            android:textColor="@color/white"/>
+            android:textColor="@color/black"/>
         <TextView
             android:id="@+id/tabrikm4"
             android:layout_width="wrap_content"
@@ -32,24 +32,50 @@
             android:layout_gravity="center_horizontal"
             android:textSize="25sp"
             android:layout_marginTop="40dp"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textAlignment="center"
             tools:text="!! Tabriklaymiz Dilfuzaxon !! \n Yahshi natija"/>
-        <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_gravity="center_horizontal"
-            android:src="@drawable/goldtrophy"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:textColor="@color/white"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/gif"
+                android:layout_width="125dp"
+                android:layout_height="125dp" />
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/goldtrophy"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/black"/>
+            <ImageView
+                android:id="@+id/gif1"
+                android:layout_width="125dp"
+                android:layout_height="125dp"/>
+
+        </LinearLayout>
         <TextView
             android:id="@+id/natijalarm4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:layout_gravity="center_horizontal"
+            android:textStyle="bold"
+            android:textSize="20sp"
             android:text="Savollar miqdori : 20 ta \nTo'gri javoblar     :15 ta \nXato javoblar      :5 ta"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:text="Umumiy Natija: \n50ta savolga 50ta to'g'ri javob!"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"/>
     </LinearLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -93,7 +119,7 @@
                 android:layout_height="wrap_content"
                 android:text="Natijani do'stlar bilan ulashing"
                 android:textAllCaps="true"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textStyle="bold" />
 
             <ImageView

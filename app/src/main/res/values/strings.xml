@@ -3,5 +3,6 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="malumot">\tZakovatUz – Islom tarixi, Umumiy tarix va qiziqarli faktlar haqidagi ko\'ngil ochar va ma\’rifiy ilova.\n - Foydalanish oson va ko\'p yangi narsalarni o\'rganishga yordam beradi. \n - Bu o\'z bilimini oshirib, vaqtdan unumli foydalanmoqchi bo\'lganlar uchun juda mos keladi.\n - ZakovatUz bilan siz bir vaqtning o\'zida bilimingizni sinab ko\'rishingiz, yangi ma\'lumotlarni o\'rganishingiz va vaqtni foydalik o\'tkazishingiz mumkin!</string>
+    <string name="oyin">\ - O\'yin 5 bosqichdan iborat \n - Xar bosqichda 10ta dan savol bor \n -  Bosqichdagi 10ta savolga 10ta to\'g\'ri javob berilmagunicha keyingi bosqichga o\'ta olmaysiz !</string>
 
 </resources>

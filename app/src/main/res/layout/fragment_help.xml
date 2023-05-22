@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/beck"
-    android:orientation="vertical"
     tools:context=".HelpFragment">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
     <ImageView
-        android:layout_marginTop="50dp"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_marginTop="30dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:src="@drawable/informative"
         android:layout_gravity="center_horizontal"
-        />
+        android:contentDescription="info" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -23,7 +26,25 @@
         android:layout_margin="20dp"
         android:text="@string/malumot"
         android:textColor="@color/white"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textSize="15dp"
+        android:textStyle="" />
 
-</LinearLayout>
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/choose"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="how to play" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:text="@string/oyin"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+    </LinearLayout>
+</ScrollView>

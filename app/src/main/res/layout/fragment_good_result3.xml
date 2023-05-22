@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/beck"
+    android:background="@drawable/right"
     tools:context=".GoodResult3Fragment">
 
     <LinearLayout
@@ -19,12 +19,12 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="4chi bosqich yakunlandi!!"
+            android:text="4-bosqich yakunlandi!!"
             android:textStyle="bold"
             android:textSize="30sp"
             android:layout_marginTop="30dp"
             android:gravity="center_horizontal"
-            android:textColor="@color/white"/>
+            android:textColor="@color/black"/>
         <TextView
             android:id="@+id/tabrikm3"
             android:layout_width="wrap_content"
@@ -32,22 +32,24 @@
             android:layout_gravity="center_horizontal"
             android:textSize="25sp"
             android:layout_marginTop="40dp"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textAlignment="center"
             tools:text="!! Tabriklaymiz Dilfuzaxon !! \n Yahshi natija"/>
         <ImageView
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_gravity="center_horizontal"
-            android:src="@drawable/goldtrophy"
+            android:src="@drawable/trophy"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
-            android:textColor="@color/white"/>
+            android:textColor="@color/black"/>
         <TextView
             android:id="@+id/natijalarm3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="20sp"
             android:layout_gravity="center_horizontal"
             android:text="Savollar miqdori : 20 ta \nTo'gri javoblar     :15 ta \nXato javoblar      :5 ta"/>
     </LinearLayout>
@@ -100,7 +102,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textStyle="bold"
                 android:textAllCaps="true"
                 android:text="Natijani do'stlar bilan ulashing"/>

@@ -39,10 +39,10 @@ class BadResult1Fragment : Fragment() {
         var name = BadResult1FragmentArgs.fromBundle(requireArguments()).name
         val btnCustomDialog: Button = view.findViewById(R.id.wrong1)
 
-        binding.tabrik1.text = "!! Afsus $name !! \nSiz ZakovatUz oyinini 2chi bosqichda yakunladingiz"
-        binding.natijalar1.text = "Savollar miqdori : $numQuestions ta \nTo'gri javoblar     : $correctJavoblar ta \nXato javoblar      : $inCorrectJavoblar ta"
+        binding.tabrik1.text = "!! Afsus $name !! \n" + "Siz ZakovatUz o'yinini 2-bosqichda yakunladingiz"
+        binding.natijalar1.text = "Savollar miqdori : $numQuestions ta \nTo'g'ri javoblar     : $correctJavoblar ta \nXato javoblar      : $inCorrectJavoblar ta"
         binding.restart1.setOnClickListener {
-            view.findNavController().navigate(R.id.action_badResult1Fragment_to_enterFragment)
+            view.findNavController().navigate(BadResult1FragmentDirections.actionBadResult1FragmentToEnterFragment(name))
         }
         btnCustomDialog.setOnClickListener {
             customDialogFunction(incorrectGuesses)

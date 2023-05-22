@@ -6,55 +6,60 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="@drawable/beck"
+        android:background="@drawable/right"
         tools:context=".GoodResultFragment">
 
         <LinearLayout
             android:id="@+id/umimiy_natijam"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="5dp"
             android:layout_weight="1"
             android:orientation="vertical">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="1chi bosqich yakunlandi!!"
+                android:text="1-bosqich yakunlandi!!"
                 android:textStyle="bold"
                 android:textSize="30sp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="5dp"
                 android:gravity="center_horizontal"
-                android:textColor="@color/white"/>
+                android:textColor="@color/black"/>
             <TextView
                 android:id="@+id/tabrikm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:textSize="25sp"
-                android:layout_marginTop="40dp"
-                android:textColor="@color/white"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
                 android:textAlignment="center"
+                android:lineSpacingMultiplier="0.7"
                 tools:text="!! Tabriklaymiz Dilfuzaxon !! \n Yahshi natija"/>
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center_horizontal"
-                android:src="@drawable/goldtrophy"
+                android:src="@drawable/trophy"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
-                android:textColor="@color/white"/>
+                android:textColor="@color/black"/>
             <TextView
                 android:id="@+id/natijalarm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:layout_gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="20sp"
                 android:text="Savollar miqdori : 20 ta \nTo'gri javoblar     :15 ta \nXato javoblar      :5 ta"/>
+
         </LinearLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
             android:orientation="horizontal">
 
             <Button
@@ -100,7 +105,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textStyle="bold"
                     android:textAllCaps="true"
                     android:text="Natijani do'stlar bilan ulashing"/>

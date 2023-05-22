@@ -8,8 +8,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.core.content.FileProvider
 import androidx.navigation.findNavController
+import com.bumptech.glide.Glide
 import com.hfad.zakovatuz.databinding.FragmentBadResultBinding
 import com.hfad.zakovatuz.databinding.FragmentGoodResult1Binding
 import com.hfad.zakovatuz.databinding.FragmentGoodResult4Binding
@@ -36,8 +38,8 @@ class GoodResult4Fragment : Fragment() {
         var correctJavoblar = GoodResult4FragmentArgs.fromBundle(requireArguments()).correctJavoblar
         var name = GoodResult4FragmentArgs.fromBundle(requireArguments()).name
 
-        binding.tabrikm4.text = "!! Tabriklaymiz $name !! \n Siz 5chi(yakuniy) bosqichni muvaffaqiyatli bajardingiz "
-        binding.natijalarm4.text = "Savollar miqdori : $numQuestions ta \nTo'gri javoblar     : $correctJavoblar ta \nXato javoblar      : $inCorrectJavoblar ta"
+        binding.tabrikm4.text = "!! Tabriklaymiz $name !! \n Siz 5-(yakuniy)bosqichni muvaffaqiyatli bajardingiz!"
+        binding.natijalarm4.text = "Savollar miqdori : $numQuestions ta \nTo'g'ri javoblar     : $correctJavoblar ta \nXato javoblar      : $inCorrectJavoblar ta"
         binding.restartm4.setOnClickListener {
             view.findNavController().navigate(R.id.action_goodResult4Fragment_to_enterFragment)
         }
@@ -45,12 +47,24 @@ class GoodResult4Fragment : Fragment() {
             generateLayoutPhoto()
             shareLayoutPhoto(" Ilovani yuklab olin \nhttps://telegram.me/joinchat/SDdS2FAiH5e4grs5")
         }
-
-//        binding.next4.setOnClickListener {
-//            view.findNavController().navigate(GoodResult4FragmentDirections.actionGoodResult4FragmentToGame2Fragment(name))
-//        }
+        gif ()
+        gif1 ()
 
         return view
+    }
+    fun gif () {
+        val gifImageView: ImageView = binding.gif
+        Glide.with(this)
+            .asGif()
+            .load(R.drawable.fire) // Assuming "fire.gif" is the name of your animated GIF file
+            .into(gifImageView)
+    }
+    fun gif1 () {
+        val gifImageView: ImageView = binding.gif1
+        Glide.with(this)
+            .asGif()
+            .load(R.drawable.fire) // Assuming "fire.gif" is the name of your animated GIF file
+            .into(gifImageView)
     }
 
 

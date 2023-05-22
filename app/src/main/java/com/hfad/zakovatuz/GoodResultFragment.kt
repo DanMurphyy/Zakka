@@ -8,8 +8,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.core.content.FileProvider
 import androidx.navigation.findNavController
+import com.bumptech.glide.Glide
 import com.hfad.zakovatuz.databinding.FragmentBadResultBinding
 import com.hfad.zakovatuz.databinding.FragmentGoodResultBinding
 import java.io.File
@@ -34,8 +36,8 @@ class GoodResultFragment : Fragment() {
         var correctJavoblar = GoodResultFragmentArgs.fromBundle(requireArguments()).correctJavoblar
         var name = GoodResultFragmentArgs.fromBundle(requireArguments()).name
 
-        binding.tabrikm.text = "!! Tabriklaymiz $name !! \n Siz 1chi bosqichni muvaffaqiyatli bajardingiz "
-        binding.natijalarm.text = "Savollar miqdori : $numQuestions ta \nTo'gri javoblar     : $correctJavoblar ta \nXato javoblar      : $inCorrectJavoblar ta"
+        binding.tabrikm.text = "!! Tabriklaymiz $name !! \n Siz 1-bosqichni muvaffaqiyatli bajardingiz!"
+        binding.natijalarm.text = "Savollar miqdori : $numQuestions ta \nTo'g'ri javoblar    : $correctJavoblar ta \nXato javoblar      : $inCorrectJavoblar ta"
         binding.restartm.setOnClickListener {
             view.findNavController().navigate(R.id.action_goodResultFragment_to_enterFragment)
         }
@@ -54,7 +56,7 @@ class GoodResultFragment : Fragment() {
 
     private fun generateLayoutPhoto(): Bitmap {
         // Find the specific view that you want to share
-        val viewToShare = binding.umimiyNatijam
+        val viewToShare = binding.root
 
         // Generate a bitmap of the view
         val bitmap = Bitmap.createBitmap(viewToShare.width, viewToShare.height, Bitmap.Config.ARGB_8888)
