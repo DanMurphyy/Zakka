@@ -41,7 +41,7 @@ class BadResult3Fragment : Fragment() {
         val btnCustomDialog: Button = view.findViewById(R.id.wrong3)
 
         binding.tabrik3.text = "!! Afsus $name !! \n" + "Siz ZakovatUz o'yinini 4-bosqichda yakunladingiz"
-        binding.natijalar3.text = "Savollar miqdori : $numQuestions ta \nTo'g'ri javoblar     : $correctJavoblar ta \nXato javoblar      : $inCorrectJavoblar ta"
+        binding.natijalar3.text = "Savollar miqdori : $numQuestions ta \nTo'g'ri javoblar    : $correctJavoblar ta \nXato javoblar      : $inCorrectJavoblar ta"
         binding.restart3.setOnClickListener {
             view.findNavController().navigate(BadResult3FragmentDirections.actionBadResult3FragmentToEnterFragment(name))
         }
@@ -69,7 +69,7 @@ class BadResult3Fragment : Fragment() {
 
     private fun generateLayoutPhoto(): Bitmap {
         // Find the specific view that you want to share
-        val viewToShare = binding.umimiyNatija3
+        val viewToShare = binding.root
 
         // Generate a bitmap of the view
         val bitmap = Bitmap.createBitmap(viewToShare.width, viewToShare.height, Bitmap.Config.ARGB_8888)

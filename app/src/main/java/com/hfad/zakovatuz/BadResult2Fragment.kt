@@ -42,7 +42,7 @@ class BadResult2Fragment : Fragment() {
         val btnCustomDialog: Button = view.findViewById(R.id.wrong2)
 
         binding.tabrik2.text = "!! Afsus $name !! \n" + "Siz ZakovatUz o'yinini 3-bosqichda yakunladingiz"
-        binding.natijalar2.text = "Savollar miqdori : $numQuestions ta \nTo'g'ri javoblar     : $correctJavoblar ta \nXato javoblar      : $inCorrectJavoblar ta"
+        binding.natijalar2.text = "Savollar miqdori : $numQuestions ta \nTo'g'ri javoblar    : $correctJavoblar ta \nXato javoblar      : $inCorrectJavoblar ta"
         binding.restart2.setOnClickListener {
             view.findNavController().navigate(BadResult2FragmentDirections.actionBadResult2FragmentToEnterFragment(name))
         }
@@ -70,7 +70,7 @@ class BadResult2Fragment : Fragment() {
 
     private fun generateLayoutPhoto(): Bitmap {
         // Find the specific view that you want to share
-        val viewToShare = binding.umimiyNatija2
+        val viewToShare = binding.root
 
         // Generate a bitmap of the view
         val bitmap = Bitmap.createBitmap(viewToShare.width, viewToShare.height, Bitmap.Config.ARGB_8888)

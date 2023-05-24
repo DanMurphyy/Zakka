@@ -36,7 +36,7 @@ class GoodResult1Fragment : Fragment() {
         var name = GoodResult1FragmentArgs.fromBundle(requireArguments()).name
 
         binding.tabrikm1.text = "!! Tabriklaymiz $name !! \n Siz 2-bosqichni muvaffaqiyatli bajardingiz!"
-        binding.natijalarm1.text = "Savollar miqdori : $numQuestions ta \nTo'g'ri javoblar     : $correctJavoblar ta \nXato javoblar      : $inCorrectJavoblar ta"
+        binding.natijalarm1.text = "Savollar miqdori : $numQuestions ta \nTo'g'ri javoblar    : $correctJavoblar ta \nXato javoblar      : $inCorrectJavoblar ta"
         binding.restartm1.setOnClickListener {
             view.findNavController().navigate(R.id.action_goodResult1Fragment_to_enterFragment)
         }
@@ -55,7 +55,7 @@ class GoodResult1Fragment : Fragment() {
 
     private fun generateLayoutPhoto(): Bitmap {
         // Find the specific view that you want to share
-        val viewToShare = binding.umimiyNatijam1
+        val viewToShare = binding.root
 
         // Generate a bitmap of the view
         val bitmap = Bitmap.createBitmap(viewToShare.width, viewToShare.height, Bitmap.Config.ARGB_8888)

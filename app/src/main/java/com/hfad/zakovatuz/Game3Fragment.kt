@@ -16,7 +16,6 @@ class Game3Fragment : Fragment() {
     lateinit var currentQuestion: Question3
     lateinit var answers: MutableList<String>
     private var questionIndex = 0
-    private var questionProgress = 0
     private var numQuestions = 3
     private var incorrectGuesses = ""
     private var incorrectJavoblar = 0
@@ -132,8 +131,17 @@ class Game3Fragment : Fragment() {
     }
 
     private fun questionProgress() {
-        questionProgress ++
-        binding.questionN3.text = "Savol: $questionProgress / $numQuestions"
+        val num = questionIndex
+        val list = progress(num.toString())
+        binding.questionN3.text = "Savol: ${list.first()} / $numQuestions"
+    }
+    fun progress(num:String) : List<String>{
+        return when(num) {
+            "0" -> listOf("1")
+            "1" -> listOf("2")
+            "2" -> listOf("3")
+            else -> listOf("3")
+        }
     }
 
     override fun onDestroyView() {
