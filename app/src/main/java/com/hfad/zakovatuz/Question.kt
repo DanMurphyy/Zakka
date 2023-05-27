@@ -8,27 +8,27 @@ data class Question(
 // All questions must have four answers.  We'd want these to contain references to string
 // resources so we could internationalize. (or better yet, not define the questions in code...)
 val questions: MutableList<Question> = mutableListOf(
-    Question(text = "What is Android Jetpack?",
-        answers = listOf("1", "tools", "documentation", "libraries")),
-    Question(text = "Base class for Layout?",
-        answers = listOf("1", "ViewSet", "ViewCollection", "ViewRoot")),
-    Question(text = "Layout for complex Screens?",
-        answers = listOf("1", "GridLayout", "LinearLayout", "FrameLayout")),
-    Question(text = "Pushing structured data into a Layout?",
-        answers = listOf("1", "Data Pushing", "Set Text", "OnClick")),
-    Question(text = "Inflate layout in fragments?",
-        answers = listOf("1", "onViewCreated", "onCreateLayout", "onInflateLayout")),
-    Question(text = "Build system for Android?",
-        answers = listOf("1", "Graddle", "Grodle", "Groyle")),
-    Question(text = "Android vector format?",
-        answers = listOf("1", "AndroidVectorDrawable", "DrawableVector", "AndroidVector")),
-    Question(text = "Android Navigation Component?",
-        answers = listOf("1", "NavCentral", "NavMaster", "NavSwitcher")),
-    Question(text = "Registers app with launcher?",
-        answers = listOf("1", "app-registry", "launcher-registry", "app-launcher")),
-    Question(text = "Mark a layout for Data Binding?",
-        answers = listOf("1", "<binding>", "<data-binding>", "<dbinding>"))
-)
+    Question(text = "Bu dunyoda bir daraxt bor. Bu daraxtni mevasini Jannatda ham payg’ambarlar yeb do’st tutishadi. Bu daraxt nima?",
+        answers = listOf("Xurmo","Anjir","Anor","Uzum")),
+    Question(text = "Bu dunyoda ikki narsa bor. To qiyomatgacha biri qochadi, biri esa quvadi. Bu narsa nima?",
+        answers = listOf("Tun va Kun","Oy va Quyosh","Suv va Yer","Yoshlik va Keksalik")),
+    Question(text = "Asadulloh (Allohniung sheri) laqabli paxlavon sahobiy kim edi?",
+        answers = listOf("Hamza r.a.","Zubair r.a."," Holid r.a.","Ali r.a.")),
+    Question(text = "Rasululloh s.a.v.ga farz bo’lgan, ummatlariga esa sunnat bo’lgan amal qaysi?",
+        answers = listOf("Misvok ishlatish","Taroveh","Nikohlanish","Kumush taqish")),
+    Question(text = "Ka’ba atrofida yetti marta aylanib, ibodat qilishga nima deyiladi?",
+        answers = listOf("Tavof","Sayir","Talbiya","Qurbonlik")),
+    Question(text = "Rasuluoh SAV va u zotning do’stlari Makkada kimning uyida yashirincha to’planardilar?",
+        answers = listOf("Arqam r.a.ning ","Ja'far r.a.ning","Abu Salama r.a.ning","Ammor r.a.ning")),
+    Question(text = "Algebra atamasiga kim asos solgan?",
+        answers = listOf("Al-Xorazmiy","Ibn Sino","Beruniy","Farg'oniy")),
+    Question(text = "Islomiy ramz sifatida hiloldan foydalanish kimlardan tarfidan boshlangan?",
+        answers = listOf("Usmoniylar","Temuriylar","Abbosiylar","Ummaviylar")),
+    Question(text = "Islom olamida Andalusiya deb qayerni aytishadi?",
+        answers = listOf("Portugaliya va Ispaniya","Fransiya va Germaniya","Italiya va Turkiya","Suriya va Iroq")),
+    Question(text = "Joni va boshi yo’q,lekin yemish yeydi. Bu narsa nima edi?",
+        answers = listOf("Muso a.s.ning asolari"," Vaqt","Solih a.s.ning tuyalari","Yunus a.s.ning kiti")),
+    )
 
 
 

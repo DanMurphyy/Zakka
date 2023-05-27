@@ -16,7 +16,7 @@ class Game4Fragment : Fragment() {
     lateinit var currentQuestion: Question4
     lateinit var answers: MutableList<String>
     private var questionIndex = 0
-    private var numQuestions = 3
+    private var numQuestions = 10
     private var incorrectGuesses = ""
     private var incorrectJavoblar = 0
     private var correctJavoblar = 0
@@ -140,7 +140,15 @@ class Game4Fragment : Fragment() {
             "0" -> listOf("1")
             "1" -> listOf("2")
             "2" -> listOf("3")
-            else -> listOf("3")
+            "3" -> listOf("4")
+            "4" -> listOf("5")
+            "5" -> listOf("6")
+            "6" -> listOf("7")
+            "7" -> listOf("8")
+            "8" -> listOf("9")
+            "9" -> listOf("10")
+            "10" -> listOf("10")
+            else -> listOf("10")
         }
     }
 
