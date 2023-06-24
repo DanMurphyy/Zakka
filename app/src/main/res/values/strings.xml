@@ -4,5 +4,26 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="malumot">\tZakovatUz – Islom tarixi, Umumiy tarix va qiziqarli faktlar haqidagi ko\'ngil ochar va ma\’rifiy ilova.\n - Foydalanish oson va ko\'p yangi narsalarni o\'rganishga yordam beradi. \n - Bu o\'z bilimini oshirib, vaqtdan unumli foydalanmoqchi bo\'lganlar uchun juda mos keladi.\n - ZakovatUz bilan siz bir vaqtning o\'zida bilimingizni sinab ko\'rishingiz, yangi ma\'lumotlarni o\'rganishingiz va vaqtni foydalik o\'tkazishingiz mumkin!</string>
     <string name="oyin">\ - O\'yin 5 bosqichdan iborat \n - Xar bosqichda 10ta dan savol bor \n -  Bosqichdagi 10ta savolga 10ta to\'g\'ri javob berilmagunicha keyingi bosqichga o\'ta olmaysiz !</string>
+    <string name="welcome_message">ZakovatUz ga \nXush kelibsiz!</string>
+    <string name="welcome_wish">Vaqtingiz foydalik o\'tsin</string>
+    <string name="welcome_name_enter">Iltimos ismingizni kiriting!</string>
+    <string name="welcome_name_hint">m.u. Dilshod</string>
+    <string name="welcome_question_type">Savollar turi</string>
+    <string name="welcome_type_islam">Islom Tarixi</string>
+    <string name="welcome_type_world">Jahon Tarixi (tez orada!)</string>
+    <string name="welcome_submit">Boshladik</string>
+    <string name="game_submit">Tekshirmoq</string>
+    <string name="info">info</string>
+    <string name="question_source">Savollar www.ziyouz.com saytidan olingan</string>
+    <string name="list_intro">Savollar ro\'yhati va to\'g\'ri javoblari:</string>
+    <string name="list_sample">Custom Dialog Content Details .Which you can set your own as per requirement.</string>
+    <string name="list_exit">Ortga</string>
+    <string name="wrong_title">O\'yin yakunlandi!!</string>
+    <string name="wrong_restart">Bosqichni Qaytadan Boshlash</string>
+    <string name="wrong_list">Xato \njavoblar</string>
+    <string name="share_text">Natijani do\'stlar bilan ulashing</string>
+    <string name="good_title">1-bosqich yakunlandi!!</string>
+    <string name="good_restart">Qaytadan Boshlash</string>
+    <string name="good_next">Keyingi \nbosqich</string>
 
 </resources>

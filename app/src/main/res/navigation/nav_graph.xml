@@ -17,7 +17,7 @@
     <fragment
         android:id="@+id/gameFragment"
         android:name="com.hfad.zakovatuz.GameFragment"
-        android:label="1-bosqich"
+        android:label="Omad yor bo'lsin"
         tools:layout="@layout/fragment_game" >
         <argument
             android:name="name"
@@ -28,8 +28,7 @@
             app:popUpTo="@id/enterFragment" />
         <action
             android:id="@+id/action_gameFragment_to_goodResultFragment"
-            app:destination="@id/goodResultFragment"
-            app:popUpTo="@id/enterFragment" />
+            app:destination="@id/goodResultFragment" />
     </fragment>
     <fragment
         android:id="@+id/helpFragment"
@@ -59,11 +58,14 @@
         <action
             android:id="@+id/action_badResultFragment_to_enterFragment"
             app:destination="@id/gameFragment" />
+        <argument
+            android:name="currentLevelIndex"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/goodResultFragment"
         android:name="com.hfad.zakovatuz.GoodResultFragment"
-        android:label=" 1-bosqich natijasi"
+        android:label="Bosqich natijasi"
         tools:layout="@layout/fragment_good_result">
         <argument
             android:name="numQuestions"
@@ -81,244 +83,11 @@
             android:id="@+id/action_goodResultFragment_to_enterFragment"
             app:destination="@id/enterFragment" />
         <action
-            android:id="@+id/action_goodResultFragment_to_game1Fragment"
-            app:destination="@id/game1Fragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/game1Fragment"
-        android:name="com.hfad.zakovatuz.Game1Fragment"
-        android:label="2-bosqich"
-        tools:layout="@layout/fragment_game1">
+            android:id="@+id/action_goodResultFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
         <argument
-            android:name="name"
-            app:argType="string"/>
-        <action
-            android:id="@+id/action_game1Fragment_to_badResult1Fragment"
-            app:destination="@id/badResult1Fragment"
-            app:popUpTo="@id/enterFragment" />
-        <action
-            android:id="@+id/action_game1Fragment_to_goodResult1Fragment"
-            app:destination="@id/goodResult1Fragment"
-            app:popUpTo="@id/enterFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/badResult1Fragment"
-        android:name="com.hfad.zakovatuz.BadResult1Fragment"
-        android:label="Natija"
-        tools:layout="@layout/fragment_bad_result1">
-        <argument
-            android:name="numQuestions"
+            android:name="currentLevelIndex"
             app:argType="integer" />
-        <argument
-            android:name="inCorrectJavoblar"
-            app:argType="integer" />
-        <argument
-            android:name="correctJavoblar"
-            app:argType="integer" />
-        <argument
-            android:name="incorrectGuesses"
-            app:argType="string" />
-        <argument
-            android:name="name"
-            app:argType="string" />
-        <action
-            android:id="@+id/action_badResult1Fragment_to_enterFragment"
-            app:destination="@id/game1Fragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/goodResult1Fragment"
-        android:name="com.hfad.zakovatuz.GoodResult1Fragment"
-        android:label="2-bosqich natijasi"
-        tools:layout="@layout/fragment_good_result1">
-        <argument
-            android:name="numQuestions"
-            app:argType="integer" />
-        <argument
-            android:name="inCorrectJavoblar"
-            app:argType="integer" />
-        <argument
-            android:name="correctJavoblar"
-            app:argType="integer" />
-        <argument
-            android:name="name"
-            app:argType="string" />
-        <action
-            android:id="@+id/action_goodResult1Fragment_to_enterFragment"
-            app:destination="@id/enterFragment" />
-        <action
-            android:id="@+id/action_goodResult1Fragment_to_game2Fragment"
-            app:destination="@id/game2Fragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/game2Fragment"
-        android:name="com.hfad.zakovatuz.Game2Fragment"
-        android:label="3-bosqich"
-        tools:layout="@layout/fragment_game2">
-        <argument
-            android:name="name"
-            app:argType="string"/>
-        <action
-            android:id="@+id/action_game2Fragment_to_badResult2Fragment"
-            app:destination="@id/badResult2Fragment"
-            app:popUpTo="@id/enterFragment" />
-        <action
-            android:id="@+id/action_game2Fragment_to_goodResult2Fragment"
-            app:destination="@id/goodResult2Fragment"
-            app:popUpTo="@id/enterFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/goodResult2Fragment"
-        android:name="com.hfad.zakovatuz.GoodResult2Fragment"
-        android:label="3-bosqich natijasi"
-        tools:layout="@layout/fragment_good_result2" >
-        <argument
-            android:name="numQuestions"
-            app:argType="integer" />
-        <argument
-            android:name="inCorrectJavoblar"
-            app:argType="integer" />
-        <argument
-            android:name="correctJavoblar"
-            app:argType="integer" />
-        <argument
-            android:name="name"
-            app:argType="string" />
-        <action
-            android:id="@+id/action_goodResult2Fragment_to_enterFragment"
-            app:destination="@id/enterFragment" />
-        <action
-            android:id="@+id/action_goodResult2Fragment_to_game3Fragment"
-            app:destination="@id/game3Fragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/badResult2Fragment"
-        android:name="com.hfad.zakovatuz.BadResult2Fragment"
-        android:label="Natija"
-        tools:layout="@layout/fragment_bad_result2" >
-        <argument
-            android:name="numQuestions"
-            app:argType="integer" />
-        <argument
-            android:name="inCorrectJavoblar"
-            app:argType="integer" />
-        <argument
-            android:name="correctJavoblar"
-            app:argType="integer" />
-        <argument
-            android:name="incorrectGuesses"
-            app:argType="string" />
-        <argument
-            android:name="name"
-            app:argType="string" />
-        <action
-            android:id="@+id/action_badResult2Fragment_to_enterFragment"
-            app:destination="@id/game2Fragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/game3Fragment"
-        android:name="com.hfad.zakovatuz.Game3Fragment"
-        android:label="4-bosqich"
-        tools:layout="@layout/fragment_game3" >
-        <argument
-            android:name="name"
-            app:argType="string"/>
-        <action
-            android:id="@+id/action_game3Fragment_to_badResult3Fragment"
-            app:destination="@id/badResult3Fragment"
-            app:popUpTo="@id/enterFragment" />
-        <action
-            android:id="@+id/action_game3Fragment_to_goodResult3Fragment"
-            app:destination="@id/goodResult3Fragment"
-            app:popUpTo="@id/enterFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/badResult3Fragment"
-        android:name="com.hfad.zakovatuz.BadResult3Fragment"
-        android:label="Natija"
-        tools:layout="@layout/fragment_bad_result3" >
-        <argument
-            android:name="numQuestions"
-            app:argType="integer" />
-        <argument
-            android:name="inCorrectJavoblar"
-            app:argType="integer" />
-        <argument
-            android:name="correctJavoblar"
-            app:argType="integer" />
-        <argument
-            android:name="incorrectGuesses"
-            app:argType="string" />
-        <argument
-            android:name="name"
-            app:argType="string" />
-        <action
-            android:id="@+id/action_badResult3Fragment_to_enterFragment"
-            app:destination="@id/game3Fragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/goodResult3Fragment"
-        android:name="com.hfad.zakovatuz.GoodResult3Fragment"
-        android:label="4-bosqich natijasi"
-        tools:layout="@layout/fragment_good_result3" >
-        <argument
-            android:name="numQuestions"
-            app:argType="integer" />
-        <argument
-            android:name="inCorrectJavoblar"
-            app:argType="integer" />
-        <argument
-            android:name="correctJavoblar"
-            app:argType="integer" />
-        <argument
-            android:name="name"
-            app:argType="string" />
-        <action
-            android:id="@+id/action_goodResult3Fragment_to_enterFragment"
-            app:destination="@id/enterFragment" />
-        <action
-            android:id="@+id/action_goodResult3Fragment_to_game4Fragment"
-            app:destination="@id/game4Fragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/game4Fragment"
-        android:name="com.hfad.zakovatuz.Game4Fragment"
-        android:label="5-yakuniy bosqich"
-        tools:layout="@layout/fragment_game4">
-        <argument
-            android:name="name"
-            app:argType="string"/>
-        <action
-            android:id="@+id/action_game4Fragment_to_badResult4Fragment"
-            app:destination="@id/badResult4Fragment"
-            app:popUpTo="@id/enterFragment" />
-        <action
-            android:id="@+id/action_game4Fragment_to_goodResult4Fragment"
-            app:destination="@id/goodResult4Fragment"
-            app:popUpTo="@id/enterFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/badResult4Fragment"
-        android:name="com.hfad.zakovatuz.BadResult4Fragment"
-        android:label="Natija"
-        tools:layout="@layout/fragment_bad_result4" >
-        <argument
-            android:name="numQuestions"
-            app:argType="integer" />
-        <argument
-            android:name="inCorrectJavoblar"
-            app:argType="integer" />
-        <argument
-            android:name="correctJavoblar"
-            app:argType="integer" />
-        <argument
-            android:name="incorrectGuesses"
-            app:argType="string" />
-        <argument
-            android:name="name"
-            app:argType="string" />
-        <action
-            android:id="@+id/action_badResult4Fragment_to_enterFragment"
-            app:destination="@id/game4Fragment" />
     </fragment>
     <fragment
         android:id="@+id/goodResult4Fragment"
@@ -337,9 +106,6 @@
         <argument
             android:name="name"
             app:argType="string" />
-        <action
-            android:id="@+id/action_goodResult4Fragment_to_enterFragment"
-            app:destination="@id/enterFragment" />
     </fragment>
 
 </navigation>

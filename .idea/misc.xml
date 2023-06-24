@@ -10,12 +10,12 @@
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1465" />
         <entry key="app/src/main/res/drawable/share.xml" value="0.131" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25384615384615383" />
-        <entry key="app/src/main/res/layout/fragment_bad_result.xml" value="0.2578125" />
+        <entry key="app/src/main/res/layout/fragment_bad_result.xml" value="0.20277777777777778" />
         <entry key="app/src/main/res/layout/fragment_bad_result1.xml" value="0.2578125" />
         <entry key="app/src/main/res/layout/fragment_bad_result2.xml" value="0.2578125" />
         <entry key="app/src/main/res/layout/fragment_bad_result3.xml" value="0.24375" />
         <entry key="app/src/main/res/layout/fragment_bad_result4.xml" value="0.24375" />
-        <entry key="app/src/main/res/layout/fragment_enter.xml" value="0.2578125" />
+        <entry key="app/src/main/res/layout/fragment_enter.xml" value="0.20277777777777778" />
         <entry key="app/src/main/res/layout/fragment_game.xml" value="0.20185185185185187" />
         <entry key="app/src/main/res/layout/fragment_game1.xml" value="0.2578125" />
         <entry key="app/src/main/res/layout/fragment_game2.xml" value="0.2578125" />
@@ -27,6 +27,7 @@
         <entry key="app/src/main/res/layout/fragment_good_result3.xml" value="0.2578125" />
         <entry key="app/src/main/res/layout/fragment_good_result4.xml" value="0.2578125" />
         <entry key="app/src/main/res/layout/fragment_help.xml" value="0.25384615384615383" />
+        <entry key="app/src/main/res/layout/wrong_answers.xml" value="0.2578125" />
         <entry key="app/src/main/res/layout/xato_javoblar.xml" value="0.2578125" />
         <entry key="app/src/main/res/menu/toolbar.xml" value="0.2578125" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1465" />

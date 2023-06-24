@@ -11,9 +11,10 @@ import android.widget.Toast
 import androidx.core.content.ContextCompat.getSystemService
 import androidx.navigation.findNavController
 import com.hfad.zakovatuz.databinding.FragmentEnterBinding
+import com.hfad.zakovatuz.manager.GameManager
 
 class EnterFragment : Fragment() {
-    private var _binding:  FragmentEnterBinding? = null
+    private var _binding: FragmentEnterBinding? = null
     private val binding get() = _binding!!
     var name = ""
 
@@ -21,12 +22,17 @@ class EnterFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View {
-       _binding = FragmentEnterBinding.inflate(inflater, container, false)
+        _binding = FragmentEnterBinding.inflate(inflater, container, false)
         val view = binding.root
+
         binding.editSubmit.setOnClickListener {
-            enterName(binding.editName.text.toString()) }
+            enterName(binding.editName.text.toString())
+        }
+        GameManager.resetGame()
+
         return view
     }
+
     private fun enterName(name: String) {
         if (name.isEmpty()) {
             Toast.makeText(requireActivity(), "Ism kiritilmadi", Toast.LENGTH_SHORT).show()
@@ -34,5 +40,7 @@ class EnterFragment : Fragment() {
             this.name = name
             val action = EnterFragmentDirections.actionEnterFragmentToGameFragment(name)
             view?.findNavController()?.navigate(action)
-            binding.editName.text!!.clear() }}
+            binding.editName.text!!.clear()
+        }
+    }
 }

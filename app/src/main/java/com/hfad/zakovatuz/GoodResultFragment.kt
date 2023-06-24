@@ -1,5 +1,6 @@
 package com.hfad.zakovatuz
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.Canvas
@@ -8,12 +9,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import androidx.core.content.FileProvider
+import androidx.core.os.bundleOf
+import androidx.fragment.app.setFragmentResult
 import androidx.navigation.findNavController
-import com.bumptech.glide.Glide
-import com.hfad.zakovatuz.databinding.FragmentBadResultBinding
 import com.hfad.zakovatuz.databinding.FragmentGoodResultBinding
+import com.hfad.zakovatuz.manager.GameManager
 import java.io.File
 import java.io.FileOutputStream
 
@@ -23,21 +24,25 @@ class GoodResultFragment : Fragment() {
     private var _binding: FragmentGoodResultBinding? = null
     private val binding get() = _binding!!
 
+    @SuppressLint("SetTextI18n")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
-    ): View? {
+    ): View {
         _binding = FragmentGoodResultBinding.inflate(inflater, container, false)
 
         val view = binding.root
 
-        var numQuestions = GoodResultFragmentArgs.fromBundle(requireArguments()).numQuestions
-        var inCorrectJavoblar = GoodResultFragmentArgs.fromBundle(requireArguments()).inCorrectJavoblar
-        var correctJavoblar = GoodResultFragmentArgs.fromBundle(requireArguments()).correctJavoblar
-        var name = GoodResultFragmentArgs.fromBundle(requireArguments()).name
+        val args = GoodResultFragmentArgs.fromBundle(requireArguments())
 
-        binding.tabrikm.text = "!! Tabriklaymiz $name !! \n Siz 1-bosqichni muvaffaqiyatli bajardingiz!"
-        binding.natijalarm.text = "Savollar miqdori : $numQuestions ta \nTo'g'ri javoblar    : $correctJavoblar ta \nXato javoblar      : $inCorrectJavoblar ta"
+        val numQuestions = args.numQuestions
+        val inCorrectJavoblar = args.inCorrectJavoblar
+        val correctJavoblar = args.correctJavoblar
+        val name = args.name
+        val currentLevelIndex = args.currentLevelIndex
+        binding.levelNumber.text = "$currentLevelIndex bosqich yakunlandi!! "
+        binding.goodIntro.text = "!! Tabriklaymiz $name !! \n Siz $currentLevelIndex -bosqichni muvaffaqiyatli bajardingiz!"
+        binding.goodResults.text = "Savollar miqdori : $numQuestions ta \nTo'g'ri javoblar    : $correctJavoblar ta \nXato javoblar      : $inCorrectJavoblar ta"
         binding.restartm.setOnClickListener {
             view.findNavController().navigate(R.id.action_goodResultFragment_to_enterFragment)
         }
@@ -47,12 +52,13 @@ class GoodResultFragment : Fragment() {
         }
 
         binding.next.setOnClickListener {
-            view.findNavController().navigate(GoodResultFragmentDirections.actionGoodResultFragmentToGame1Fragment(name))
+            setFragmentResult("nextLevelRequestKey", bundleOf())
+            view?.findNavController()?.navigateUp()
+            GameManager.goToNextLevel()
         }
 
         return view
     }
-
 
     private fun generateLayoutPhoto(): Bitmap {
         // Find the specific view that you want to share
@@ -91,5 +97,4 @@ class GoodResultFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-
 }

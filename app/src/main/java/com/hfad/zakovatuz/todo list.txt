@@ -1,0 +1,28 @@
+[ ] view model qoshilsin
+[ ] xml fragmentga emas viewmodelga boglansin
+[ ] set result'larni ishlang
+[ ] hammasi dynamic ishlasin
+    [ ] hamma xml'larni reformat qiling
+[ ] GameFragment'da duplicate code'lar juda ko'p. Hammasi methodlashtirilsin
+    [ ] Hamma o'zbekcha yozilingan variable name'larni hammasini ingilizchaga o'giring
+    [ ] strings.xml ishlatilinsin. Hard Coded??? string'lar bo'lmasin
+[ ] Question list hammasi database'dan kelsin - ROOM | version 2'da
+[ ] Proektni har bir liniyasini yaxshilab qarab perfect qilib chiqing `correntAnswer` methodini qilganimizdek.
+[ ] GameFragment'dan GameManager'ga aloqador narsalarni ajratib chiqarib, GameManager classiga tiqilsin. GameFragment juda kotta bb ketipti.
+[ ] Screenshot olish methodlarini hammasini Util class'ga olib o'shalarni chaqiraylik. ChatGPT'dan so'ren buni.
+[ ] Ismlandirmalarga juda ham diqqatli bo'lish kerak. Odam code'ni moshina uchun emas, o'zi uchun va odamlar uchun yozadi. Yarim yil o'tib o'ziz yozgan code'ni chunishiz uchun ham chunarli yozish kerak.
+[ ] Shortcutlar - bularni har kuni ishlatish kerak.
+    - Command W
+    - Command R
+    - Command F
+    - Command G
+    - Command Option L -- reformat, har doim qilish kerak buni
+    - Command Shift V -- clipboard history
+    - Command B
+    - Command /
+    - Command 6 - logcat
+    - Command 1
+    - Fn + Shift + F6 -- reformat throughout
+    - Command Nuqta
+    - Shift Enter
+

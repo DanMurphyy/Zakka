@@ -1,17 +1,18 @@
 package com.hfad.zakovatuz
 
+import android.annotation.SuppressLint
 import android.app.Dialog
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import androidx.core.content.FileProvider
+import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.hfad.zakovatuz.databinding.FragmentBadResultBinding
 import java.io.File
@@ -21,33 +22,36 @@ class BadResultFragment : Fragment() {
     private var _binding: FragmentBadResultBinding? = null
     private val binding get() = _binding!!
 
-    private var __binding = R.layout.xato_javoblar
-    private lateinit var bitmap: Bitmap
-
+    @SuppressLint("SetTextI18n")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         _binding = FragmentBadResultBinding.inflate(inflater, container, false)
 
         val view = binding.root
-        var numQuestions = BadResultFragmentArgs.fromBundle(requireArguments()).numQuestions
-        var incorrectGuesses = BadResultFragmentArgs.fromBundle(requireArguments()).incorrectGuesses
-        var inCorrectJavoblar = BadResultFragmentArgs.fromBundle(requireArguments()).inCorrectJavoblar
-        var correctJavoblar = BadResultFragmentArgs.fromBundle(requireArguments()).correctJavoblar
-        var name = BadResultFragmentArgs.fromBundle(requireArguments()).name
+        val numQuestions = BadResultFragmentArgs.fromBundle(requireArguments()).numQuestions
+        val incorrectGuesses = BadResultFragmentArgs.fromBundle(requireArguments()).incorrectGuesses
+        val inCorrectJavoblar =
+            BadResultFragmentArgs.fromBundle(requireArguments()).inCorrectJavoblar
+        val correctJavoblar = BadResultFragmentArgs.fromBundle(requireArguments()).correctJavoblar
+        val name = BadResultFragmentArgs.fromBundle(requireArguments()).name
         val btnCustomDialog: Button = view.findViewById(R.id.wrong)
+        val currentLevelIndex = BadResultFragmentArgs.fromBundle(requireArguments()).currentLevelIndex
 
-        binding.tabrik.text = "!! Afsus $name !! \nSiz ZakovatUz o'yinini 1-bosqichda yakunladingiz"
-        binding.natijalar.text = "Savollar miqdori : $numQuestions ta \nTo'g'ri javoblar    : $correctJavoblar ta \nXato javoblar      : $inCorrectJavoblar ta"
+        binding.wrongIntro.text =
+            "!! Afsus $name !! \nSiz ZakovatUz o'yinini $currentLevelIndex -bosqichda yakunladingiz"
+        binding.wrongResult.text =
+            "Savollar miqdori : $numQuestions ta \nTo'g'ri javoblar    : $correctJavoblar ta \nXato javoblar      : $inCorrectJavoblar ta"
         binding.restart.setOnClickListener {
-            view.findNavController().navigate(BadResultFragmentDirections.actionBadResultFragmentToEnterFragment(name))
+            view.findNavController()
+                .navigate(BadResultFragmentDirections.actionBadResultFragmentToEnterFragment(name))
         }
         btnCustomDialog.setOnClickListener {
             customDialogFunction(incorrectGuesses)
         }
-        binding.share.setOnClickListener{
+        binding.share.setOnClickListener {
             generateLayoutPhoto()
             shareLayoutPhoto(" Ilovani yuklab olin \nhttps://telegram.me/joinchat/SDdS2FAiH5e4grs5")
         }
@@ -57,8 +61,8 @@ class BadResultFragment : Fragment() {
 
     private fun customDialogFunction(incorrectGuesses: String) {
         val customDialog = Dialog(requireContext())
-        customDialog.setContentView(R.layout.xato_javoblar)
-        val textXato = customDialog.findViewById<TextView>(R.id.royhat)
+        customDialog.setContentView(R.layout.wrong_answers)
+        val textXato = customDialog.findViewById<TextView>(R.id.list)
         textXato.text = incorrectGuesses
         customDialog.findViewById<TextView>(R.id.tv_cancel).setOnClickListener {
             customDialog.dismiss()
@@ -71,7 +75,8 @@ class BadResultFragment : Fragment() {
         val viewToShare = binding.root
 
         // Generate a bitmap of the view
-        val bitmap = Bitmap.createBitmap(viewToShare.width, viewToShare.height, Bitmap.Config.ARGB_8888)
+        val bitmap =
+            Bitmap.createBitmap(viewToShare.width, viewToShare.height, Bitmap.Config.ARGB_8888)
         val canvas = Canvas(bitmap)
         viewToShare.draw(canvas)
 
@@ -91,7 +96,10 @@ class BadResultFragment : Fragment() {
         // Create a share intent for the temporary file and the caption
         val shareIntent = Intent(Intent.ACTION_SEND)
         shareIntent.type = "image/jpeg"
-        shareIntent.putExtra(Intent.EXTRA_STREAM, FileProvider.getUriForFile(requireContext(), BuildConfig.APPLICATION_ID + ".provider", file))
+        shareIntent.putExtra(Intent.EXTRA_STREAM,
+            FileProvider.getUriForFile(requireContext(),
+                BuildConfig.APPLICATION_ID + ".provider",
+                file))
         shareIntent.putExtra(Intent.EXTRA_TEXT, caption)
         shareIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
 

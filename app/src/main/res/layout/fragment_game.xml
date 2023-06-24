@@ -1,48 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     tools:context=".GameFragment">
+
     <data>
+
         <variable
             name="game"
             type="com.hfad.zakovatuz.GameFragment" />
     </data>
 
-<ScrollView
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fillViewport="true"
         android:background="@drawable/beck"
+        android:fillViewport="true"
         android:padding="15dp">
+
         <LinearLayout
             android:id="@+id/frameLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="15dp"
-            android:orientation="vertical">
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+
+            <TextView
+                android:id="@+id/level_game"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:textColor="@color/teal_200"
+                android:padding="30dp"
+                android:textStyle="bold"
+                android:textSize="30dp"
+                tools:text="1 - bosqich " />
 
             <TextView
                 android:id="@+id/questionN"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="Savollar : "
+                android:layout_marginBottom="20dp"
                 android:textColor="@color/white"
-                android:layout_marginBottom="20dp"/>
+                tools:text="Savollar : " />
 
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="25dp"
-                android:layout_gravity="center">
+                android:layout_gravity="center"
+                app:cardCornerRadius="25dp">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:padding="20dp">
+
                     <TextView
                         android:id="@+id/questionText"
                         android:layout_width="wrap_content"
@@ -56,50 +72,55 @@
                 </LinearLayout>
 
             </com.google.android.material.card.MaterialCardView>
+
             <RadioGroup
                 android:id="@+id/questionRadioGroup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:animateLayoutChanges="true"
-                android:padding="15dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:padding="15dp">
+
                 <RadioButton
                     android:id="@+id/firstAnswerRadioButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:checked="true"
-                    android:text="@{game.answers[0]}"
+                    android:text="@{game.currentQuestionShuffledAnswerList[0]}"
                     android:textColor="@color/white"
+                    tools:text="Oq" />
 
-                    tools:text="Oq"/>
                 <RadioButton
                     android:id="@+id/secondAnswerRadioButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@{game.answers[1]}"
+                    android:text="@{game.currentQuestionShuffledAnswerList[1]}"
                     android:textColor="@color/white"
-                    tools:text="Qora"/>
+                    tools:text="Qora" />
+
                 <RadioButton
                     android:id="@+id/thirdAnswerRadioButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@{game.answers[2]}"
+                    android:text="@{game.currentQuestionShuffledAnswerList[2]}"
                     android:textColor="@color/white"
-                    tools:text="Yashil"/>
+                    tools:text="Yashil" />
+
                 <RadioButton
                     android:id="@+id/fourthAnswerRadioButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:text="@{game.currentQuestionShuffledAnswerList[3]}"
                     android:textColor="@color/white"
-                    android:text="@{game.answers[3]}"
-                    tools:text="Qizil"/>
+                    tools:text="Qizil" />
             </RadioGroup>
+
             <Button
                 android:id="@+id/submitButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/button_bg"
-                android:text="Tekshirmoq"/>
+                android:text="@string/game_submit" />
         </LinearLayout>
-</ScrollView>
+    </ScrollView>
 </layout>
