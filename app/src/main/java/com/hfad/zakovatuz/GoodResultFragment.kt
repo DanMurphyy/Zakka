@@ -9,10 +9,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.core.content.FileProvider
 import androidx.core.os.bundleOf
 import androidx.fragment.app.setFragmentResult
 import androidx.navigation.findNavController
+import com.bumptech.glide.Glide
 import com.hfad.zakovatuz.databinding.FragmentGoodResultBinding
 import com.hfad.zakovatuz.manager.GameManager
 import java.io.File
@@ -43,22 +45,69 @@ class GoodResultFragment : Fragment() {
         binding.levelNumber.text = "$currentLevelIndex bosqich yakunlandi!! "
         binding.goodIntro.text = "!! Tabriklaymiz $name !! \n Siz $currentLevelIndex -bosqichni muvaffaqiyatli bajardingiz!"
         binding.goodResults.text = "Savollar miqdori : $numQuestions ta \nTo'g'ri javoblar    : $correctJavoblar ta \nXato javoblar      : $inCorrectJavoblar ta"
+
+        binding.levelNumberFinal.text = "$currentLevelIndex bosqich yakunlandi!! "
+        binding.goodIntroFinal.text = "!! Tabriklaymiz $name !! \n Siz $currentLevelIndex -bosqichni muvaffaqiyatli bajardingiz!"
+        binding.goodResultsFinal.text = "Savollar miqdori : $numQuestions ta \nTo'g'ri javoblar    : $correctJavoblar ta \nXato javoblar      : $inCorrectJavoblar ta"
+
+        if ( currentLevelIndex <= 4) {
+            binding.goodResultsFinal.visibility=View.INVISIBLE
+            binding.shareRestartFinal.visibility=View.INVISIBLE
+            binding.finalOveral.visibility=View.INVISIBLE
+            binding.prizeFinal.visibility=View.INVISIBLE
+            binding.goodResultMain.visibility = View.VISIBLE
+            binding.shareRestartMain.visibility = View.VISIBLE
+        } else {
+            binding.goodResultMain.visibility = View.INVISIBLE
+            binding.shareRestartMain.visibility = View.INVISIBLE
+            binding.goodResultsFinal.visibility=View.VISIBLE
+            binding.shareRestartFinal.visibility=View.VISIBLE
+            binding.finalOveral.visibility=View.VISIBLE
+            binding.prizeFinal.visibility=View.VISIBLE
+
+            gif ()
+            gif1 ()
+        }
+
         binding.restartm.setOnClickListener {
+            view.findNavController().navigate(R.id.action_goodResultFragment_to_enterFragment)
+        }
+        binding.restartfinal.setOnClickListener {
             view.findNavController().navigate(R.id.action_goodResultFragment_to_enterFragment)
         }
         binding.sharem.setOnClickListener{
             generateLayoutPhoto()
             shareLayoutPhoto(" Ilovani yuklab olin \nhttps://telegram.me/joinchat/SDdS2FAiH5e4grs5")
         }
-
+        binding.sharem4.setOnClickListener{
+            generateLayoutPhoto()
+            shareLayoutPhoto(" Ilovani yuklab olin \nhttps://telegram.me/joinchat/SDdS2FAiH5e4grs5")
+        }
         binding.next.setOnClickListener {
             setFragmentResult("nextLevelRequestKey", bundleOf())
             view?.findNavController()?.navigateUp()
             GameManager.goToNextLevel()
         }
 
+
         return view
     }
+
+    fun gif () {
+        val gifImageView: ImageView = binding.gif
+        Glide.with(this)
+            .asGif()
+            .load(R.drawable.fire) // Assuming "fire.gif" is the name of your animated GIF file
+            .into(gifImageView)
+    }
+    fun gif1 () {
+        val gifImageView: ImageView = binding.gif1
+        Glide.with(this)
+            .asGif()
+            .load(R.drawable.fire) // Assuming "fire.gif" is the name of your animated GIF file
+            .into(gifImageView)
+    }
+
 
     private fun generateLayoutPhoto(): Bitmap {
         // Find the specific view that you want to share

@@ -89,23 +89,5 @@
             android:name="currentLevelIndex"
             app:argType="integer" />
     </fragment>
-    <fragment
-        android:id="@+id/goodResult4Fragment"
-        android:name="com.hfad.zakovatuz.GoodResult4Fragment"
-        android:label="Oyin Yakunlandi!!!"
-        tools:layout="@layout/fragment_good_result4" >
-        <argument
-            android:name="numQuestions"
-            app:argType="integer" />
-        <argument
-            android:name="inCorrectJavoblar"
-            app:argType="integer" />
-        <argument
-            android:name="correctJavoblar"
-            app:argType="integer" />
-        <argument
-            android:name="name"
-            app:argType="string" />
-    </fragment>
 
 </navigation>

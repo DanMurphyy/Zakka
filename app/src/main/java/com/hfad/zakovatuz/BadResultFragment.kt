@@ -63,7 +63,7 @@ class BadResultFragment : Fragment() {
         val customDialog = Dialog(requireContext())
         customDialog.setContentView(R.layout.wrong_answers)
         val textXato = customDialog.findViewById<TextView>(R.id.list)
-        textXato.text = incorrectGuesses
+        textXato.text = incorrectGuesses.substring(1, incorrectGuesses.length - 1)
         customDialog.findViewById<TextView>(R.id.tv_cancel).setOnClickListener {
             customDialog.dismiss()
         }

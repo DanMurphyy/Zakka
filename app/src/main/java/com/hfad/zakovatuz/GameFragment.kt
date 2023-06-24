@@ -22,7 +22,7 @@ class GameFragment : Fragment() {
     lateinit var currentQuestionShuffledAnswerList: List<String>
 
     private var currentQuestionIndex = 0
-    private var numQuestions = 2
+    private var numQuestions = 1
 
     private var incorrectGuesses = mutableListOf<String>()
     private var incorrectAnswerCount = 0
@@ -138,7 +138,7 @@ class GameFragment : Fragment() {
         val isUserSelectionIncorrect = userSelectedOption != theCorrectOption
         if (isUserSelectionIncorrect) {
             currentQuestionIndex++
-            incorrectGuesses += "\n($currentQuestionIndex) ${currentQuestion.text} \n${currentQuestion.answers[0]} \n"
+            incorrectGuesses.add("\n($currentQuestionIndex) ${currentQuestion.text} \n${currentQuestion.answers[0]} \n")
             incorrectAnswerCount++
 
             // Advance to the next question

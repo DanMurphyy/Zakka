@@ -105,7 +105,7 @@ object QuestionManager {
                 "Zubayr ibn Avvom r.a.")),
         Question(text = " Qur’oni karimda qaysi payg‘ambar haqidagi qissa faqat bitta surada hikoya qilinadi va boshqa suralarda uchramaydi?",
             answers = listOf("Yusuf a.s.", "Iso a.s.", "Odam a.s.", "Yunus a.s.")),
-        Question(text = "Payga’mbar SAV ilk bino etgan masjid qaysi?",
+        Question(text = "Payg’ambarimizning SAV ilk bino etgan masjid qaysi?",
             answers = listOf("Qubo masjidi", "Aqso masjidi", "Masjid An Nabaviy", "AlHaram")),
         Question(text = "Payg’ambarimiz Muhammad SAV hadislarida ta’kidlangan \"Ozi halol-u, lekin Allohga eng yomon korilgan narsa\" nima?",
             answers = listOf("Taloq", "Qarz", "Yolg'on", "Vada")),
