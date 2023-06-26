@@ -177,7 +177,7 @@ object QuestionManager {
                 "Tolha ibn Ubaydulloh r.a.",
                 "Bilol ibn Raboh r.a.")),
         Question(text = "Badr g’azotida musulmonlar bayrog’ini kim ko’targan edi?",
-            answers = listOf("Musab ibn Umayr",
+            answers = listOf("Musab ibn Umayr r.a",
                 "Abu Ubayda ibn Jarroh r.a.",
                 "Abu Bakr r.a.",
                 "Habbob ibn Arat r.a.")),

@@ -22,7 +22,7 @@ class GameFragment : Fragment() {
     lateinit var currentQuestionShuffledAnswerList: List<String>
 
     private var currentQuestionIndex = 0
-    private var numQuestions = 1
+    private var numQuestions = 3
 
     private var incorrectGuesses = mutableListOf<String>()
     private var incorrectAnswerCount = 0
