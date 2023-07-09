@@ -12,7 +12,8 @@
         tools:layout="@layout/fragment_enter" >
         <action
             android:id="@+id/action_enterFragment_to_gameFragment"
-            app:destination="@id/gameFragment" />
+            app:destination="@id/gameFragment"
+            app:popUpTo="@id/enterFragment" />
     </fragment>
     <fragment
         android:id="@+id/gameFragment"
@@ -28,7 +29,8 @@
             app:popUpTo="@id/enterFragment" />
         <action
             android:id="@+id/action_gameFragment_to_goodResultFragment"
-            app:destination="@id/goodResultFragment" />
+            app:destination="@id/goodResultFragment"
+            app:popUpTo="@id/enterFragment" />
     </fragment>
     <fragment
         android:id="@+id/helpFragment"
