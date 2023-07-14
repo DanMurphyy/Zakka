@@ -1,15 +1,11 @@
 package com.hfad.zakovatuz
 
-import android.content.Context
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.view.inputmethod.InputMethodManager
+import android.view.*
 import android.widget.Toast
-import androidx.core.content.ContextCompat.getSystemService
+import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.hfad.zakovatuz.databinding.FragmentEnterBinding
 import com.hfad.zakovatuz.manager.GameManager
 
@@ -24,6 +20,8 @@ class EnterFragment : Fragment() {
     ): View {
         _binding = FragmentEnterBinding.inflate(inflater, container, false)
         val view = binding.root
+
+        setHasOptionsMenu(true)
 
         binding.editSubmit.setOnClickListener {
             enterName(binding.editName.text.toString())
@@ -42,5 +40,16 @@ class EnterFragment : Fragment() {
             view?.findNavController()?.navigate(action)
             binding.editName.text!!.clear()
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.toolbar, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.helpFragment -> findNavController().navigate(R.id.action_enterFragment_to_helpFragment)
+        }
+        return super.onOptionsItemSelected(item)
     }
 }
