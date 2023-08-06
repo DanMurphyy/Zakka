@@ -16,8 +16,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ZakovatUz"
         tools:targetApi="31">
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-8558811277281829~4720439366"/>
         <activity
             android:name=".MainActivity"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize"
             android:exported="true">
             <intent-filter>

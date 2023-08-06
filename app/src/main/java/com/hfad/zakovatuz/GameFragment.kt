@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.setFragmentResultListener
 import androidx.navigation.fragment.findNavController
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.MobileAds
 import com.hfad.zakovatuz.databinding.FragmentGameBinding
 import com.hfad.zakovatuz.manager.GameManager
 import com.hfad.zakovatuz.manager.GameManager.currentLevel
@@ -22,7 +24,7 @@ class GameFragment : Fragment() {
     lateinit var currentQuestionShuffledAnswerList: List<String>
 
     private var currentQuestionIndex = 0
-    private var numQuestions = 3
+    private var numQuestions = 10
 
     private var incorrectGuesses = mutableListOf<String>()
     private var incorrectAnswerCount = 0
@@ -41,6 +43,10 @@ class GameFragment : Fragment() {
 
         userName = GameFragmentArgs.fromBundle(requireArguments()).name
         binding.game = this
+
+
+        val adRequest = AdRequest.Builder().build()
+        binding.adView2.loadAd(adRequest)
         return view
     }
 

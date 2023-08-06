@@ -57,7 +57,22 @@
             tools:text="Savollar miqdori : 20 ta \nTo'gri javoblar     :15 ta \nXato javoblar      :5 ta" />
     </LinearLayout>
 
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-8558811277281829/3378083867"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/forAdd">
+
+    </com.google.android.gms.ads.AdView>
+
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/forAdd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"

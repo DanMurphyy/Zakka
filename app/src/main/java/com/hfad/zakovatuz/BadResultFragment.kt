@@ -2,10 +2,12 @@ package com.hfad.zakovatuz
 
 import android.annotation.SuppressLint
 import android.app.Dialog
+import android.content.ContentValues.TAG
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,6 +16,10 @@ import android.widget.TextView
 import androidx.core.content.FileProvider
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.LoadAdError
+import com.google.android.gms.ads.interstitial.InterstitialAd
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
 import com.hfad.zakovatuz.databinding.FragmentBadResultBinding
 import java.io.File
 import java.io.FileOutputStream
@@ -21,6 +27,7 @@ import java.io.FileOutputStream
 class BadResultFragment : Fragment() {
     private var _binding: FragmentBadResultBinding? = null
     private val binding get() = _binding!!
+    private var mInterstitialAd: InterstitialAd? = null
 
     @SuppressLint("SetTextI18n")
     override fun onCreateView(
@@ -30,6 +37,33 @@ class BadResultFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding = FragmentBadResultBinding.inflate(inflater, container, false)
 
+        val adRequest = AdRequest.Builder().build()
+        binding.adView5.loadAd(adRequest)
+
+
+        val adInRequest = AdRequest.Builder().build()
+
+        InterstitialAd.load(requireContext(),
+            "ca-app-pub-8558811277281829/1887293823",
+            adInRequest,
+            object : InterstitialAdLoadCallback() {
+                override fun onAdFailedToLoad(adError: LoadAdError) {
+                    Log.d(TAG, adError.toString())
+                    mInterstitialAd = null
+                }
+
+                override fun onAdLoaded(interstitialAd: InterstitialAd) {
+                    Log.d(TAG, "Ad was loaded")
+                    mInterstitialAd = interstitialAd
+                }
+            })
+
+        if (mInterstitialAd != null) {
+            mInterstitialAd?.show(requireActivity())
+        } else {
+            Log.d("TAG", "The interstitial ad wasn't ready yet.")
+        }
+
         val view = binding.root
         val numQuestions = BadResultFragmentArgs.fromBundle(requireArguments()).numQuestions
         val incorrectGuesses = BadResultFragmentArgs.fromBundle(requireArguments()).incorrectGuesses
@@ -38,7 +72,8 @@ class BadResultFragment : Fragment() {
         val correctJavoblar = BadResultFragmentArgs.fromBundle(requireArguments()).correctJavoblar
         val name = BadResultFragmentArgs.fromBundle(requireArguments()).name
         val btnCustomDialog: Button = view.findViewById(R.id.wrong)
-        val currentLevelIndex = BadResultFragmentArgs.fromBundle(requireArguments()).currentLevelIndex
+        val currentLevelIndex =
+            BadResultFragmentArgs.fromBundle(requireArguments()).currentLevelIndex
 
         binding.wrongIntro.text =
             "!! Afsus $name !! \nSiz ZakovatUz o'yinini $currentLevelIndex -bosqichda yakunladingiz"
@@ -49,11 +84,17 @@ class BadResultFragment : Fragment() {
                 .navigate(BadResultFragmentDirections.actionBadResultFragmentToEnterFragment(name))
         }
         btnCustomDialog.setOnClickListener {
+            if (mInterstitialAd != null) {
+                mInterstitialAd?.show(requireActivity())
+            } else {
+                Log.d("TAG", "The interstitial ad wasn't ready yet.")
+            }
             customDialogFunction(incorrectGuesses)
         }
+
         binding.share.setOnClickListener {
             generateLayoutPhoto()
-            shareLayoutPhoto(" Ilovani yuklab olin \nhttps://telegram.me/joinchat/SDdS2FAiH5e4grs5")
+            shareLayoutPhoto(" Ilovani yuklab olin \nhttps://play.google.com/store/apps/details?id=com.hfad.zakovatuz")
         }
 
         return view

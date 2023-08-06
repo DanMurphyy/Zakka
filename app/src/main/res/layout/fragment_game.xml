@@ -32,10 +32,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
-                android:textColor="@color/teal_200"
                 android:padding="30dp"
-                android:textStyle="bold"
+                android:textColor="@color/teal_200"
                 android:textSize="30dp"
+                android:textStyle="bold"
                 tools:text="1 - bosqich " />
 
             <TextView
@@ -121,6 +121,17 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/button_bg"
                 android:text="@string/game_submit" />
+
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/adView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                app:adSize="BANNER"
+                app:adUnitId="ca-app-pub-8558811277281829/3378083867">
+
+            </com.google.android.gms.ads.AdView>
         </LinearLayout>
     </ScrollView>
 </layout>

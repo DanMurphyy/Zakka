@@ -33,8 +33,7 @@
             app:popUpTo="@id/enterFragment" />
         <action
             android:id="@+id/action_gameFragment_to_goodResultFragment"
-            app:destination="@id/goodResultFragment"
-            app:popUpTo="@id/enterFragment" />
+            app:destination="@id/goodResultFragment" />
     </fragment>
     <fragment
         android:id="@+id/helpFragment"
