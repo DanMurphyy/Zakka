@@ -115,11 +115,11 @@ class GoodResultFragment : Fragment() {
         }
         binding.sharem.setOnClickListener {
             generateLayoutPhoto()
-            shareLayoutPhoto(" Ilovani yuklab olin \nhttps://play.google.com/store/apps/details?id=com.hfad.zakovatuz")
+            shareLayoutPhoto(" Ilovani yuklab oling \nhttps://play.google.com/store/apps/details?id=com.hfad.zakovatuz")
         }
         binding.sharem4.setOnClickListener {
             generateLayoutPhoto()
-            shareLayoutPhoto(" Ilovani yuklab olin \nhttps://play.google.com/store/apps/details?id=com.hfad.zakovatuz")
+            shareLayoutPhoto(" Ilovani yuklab oling \nhttps://play.google.com/store/apps/details?id=com.hfad.zakovatuz")
         }
         binding.next.setOnClickListener {
             if (mInterstitialAd != null) {

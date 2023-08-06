@@ -94,7 +94,7 @@ class BadResultFragment : Fragment() {
 
         binding.share.setOnClickListener {
             generateLayoutPhoto()
-            shareLayoutPhoto(" Ilovani yuklab olin \nhttps://play.google.com/store/apps/details?id=com.hfad.zakovatuz")
+            shareLayoutPhoto(" Ilovani yuklab oling \nhttps://play.google.com/store/apps/details?id=com.hfad.zakovatuz")
         }
 
         return view
@@ -117,7 +117,7 @@ class BadResultFragment : Fragment() {
 
         // Generate a bitmap of the view
         val bitmap =
-            Bitmap.createBitmap(viewToShare.width, viewToShare.height, Bitmap.Config.ARGB_8888)
+            Bitmap.createBitmap(binding.wrongGeneral.width, binding.wrongGeneral.height, Bitmap.Config.ARGB_8888)
         val canvas = Canvas(bitmap)
         viewToShare.draw(canvas)
 
